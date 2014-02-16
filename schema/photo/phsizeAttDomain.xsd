@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+						elementFormDefault="qualified"
+						attributeFormDefault="unqualified"
+						xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+
+	<xs:attributeGroup name="phsizeAtt-d-attribute">
+		<xs:attribute name="phsize" type="phsize-atts.class" default="middle"/>
+	</xs:attributeGroup>
+	
+	<xs:simpleType name="phsize-atts.class">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="small"/>
+			<xs:enumeration value="middle"/>
+			<xs:enumeration value="large"/>
+			<xs:enumeration value="xlarge"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>

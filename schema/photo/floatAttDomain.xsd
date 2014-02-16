@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+
+	<xs:attributeGroup name="floatAtt-d-attribute">
+		<xs:attribute name="float" type="float-atts.class" default="left"/>
+	</xs:attributeGroup>
+
+	<xs:simpleType name="float-atts.class">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="left"/>
+			<xs:enumeration value="right"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

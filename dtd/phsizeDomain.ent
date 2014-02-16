@@ -1,0 +1,12 @@
+	<!-- ============================================================= -->
+<!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
+<!--                    TYPICAL INVOCATION                         -->
+<!--                                                               -->
+<!--  Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//TEUX//ENTITIES DITA Photo Size Attribute Domain//RU"
+      Delivered as file "phsizeDomain.ent"                       -->
+	  
+<!ENTITY % phsize-d-attribute 'phsize (small | middle | large | xlarge) "middle"'>
+
+	<!ENTITY phsize-d-att "a(base phsize)" >

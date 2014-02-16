@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	
+
+
+	<!-- commonElementMod -->
+	<xs:redefine schemaLocation="urn:oasis:names:tc:dita:xsd:commonElementMod.xsd:1.2">
+		<xs:group name="title.cnt">
+			<xs:choice>
+				<xs:group ref="basic.ph.noxref"/>
+<!--				<xs:group ref="image"/>-->
+<!--				<xs:group ref="data.elements.incl"/>-->
+<!--				<xs:group ref="foreign.unknown.incl"/>-->
+			</xs:choice>
+		</xs:group>
+		<xs:group name="basic.ph.noxref">
+			<xs:choice>
+				<xs:group ref="ph"/>
+			<!--<xs:group ref="term"/>
+				<xs:group ref="q"/>
+				<xs:group ref="state"/>
+				<xs:group ref="boolean"/>
+				<xs:group ref="keyword"/>
+				<xs:group ref="tm"/>-->
+			</xs:choice>
+		</xs:group>
+		
+	<!--	<xs:group name="title.cnt">
+			<xs:choice>
+				<xs:group ref="text"/>
+			</xs:choice>
+		</xs:group>-->
+
+		<xs:group name="para.cnt">
+			<xs:choice>
+				<xs:group ref="basic.ph"/>
+				<xs:group ref="image"/>
+			</xs:choice>
+		</xs:group>
+
+		<xs:group name="note.cnt">
+			<xs:choice>
+				<xs:group ref="basic.ph"/>
+				<xs:group ref="basic.block.nonote"/>
+				<!-- <xs:group ref="txt.incl"/> -->
+				<!-- <xs:group ref="data.elements.incl"/> -->
+				<!-- <xs:group ref="foreign.unknown.incl"/> -->
+			</xs:choice>
+		</xs:group>
+
+		<xs:group name="listitem.cnt">
+			<xs:choice>
+				<xs:group ref="basic.ph"/>
+				<xs:group ref="basic.block"/>
+				<!-- <xs:group ref="itemgroup"/> -->
+				<!-- <xs:group ref="txt.incl"/> -->
+				<!-- <xs:group ref="data.elements.incl"/> -->
+				<!-- <xs:group ref="foreign.unknown.incl"/> -->
+			</xs:choice>
+		</xs:group>
+
+	</xs:redefine>
+
+</xs:schema>

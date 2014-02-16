@@ -1,0 +1,12 @@
+	<!-- ============================================================= -->
+<!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
+<!--                    TYPICAL INVOCATION                         -->
+<!--                                                               -->
+<!--  Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//TEUX//ENTITIES DITA Float Attribute Domain//RU"
+      Delivered as file "columnsDomain.ent"                       -->
+	  
+<!ENTITY % float-d-attribute 'float (left | right) "left"'>
+
+<!ENTITY float-d-att "a(base float)" >

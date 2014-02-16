@@ -1,0 +1,12 @@
+	<!-- ============================================================= -->
+<!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
+<!--                    TYPICAL INVOCATION                         -->
+<!--                                                               -->
+<!--  Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//TEUX//ENTITIES DITA Redim Attribute Domain//RU"
+      Delivered as file "columnsDomain.ent"                       -->
+	  
+<!ENTITY % redim-d-attribute 'redim (enable | disable) "enable"'>
+
+<!ENTITY redim-d-att "a(base redim)" >

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin id="ru.teux.photo">
+  <feature extension="dita.specialization.catalog.relative" file="catalog-photo.xml"/>
+  <feature extension="dita.xsl.xhtml" file="xsl/photo2xhtml.xsl"/> 
+</plugin>
