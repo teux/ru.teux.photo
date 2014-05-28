@@ -50,6 +50,14 @@
 		</xs:sequence>
 	</xs:group>
 
+	<xs:group name="umap">
+		<xs:sequence>
+			<xs:choice>
+				<xs:element ref="umap"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
+	
 	<xs:group name="youTube">
 		<xs:sequence>
 			<xs:choice>

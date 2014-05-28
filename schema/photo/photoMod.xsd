@@ -202,6 +202,7 @@
 				<xs:group ref="general.blocks"/>
 				<xs:group ref="floatFig"/>
 				<xs:group ref="everyTrail"/>
+				<xs:group ref="umap"/>
 				<xs:group ref="youTube"/>
 				<xs:group ref="clearFloat"/>
 			</xs:choice>
@@ -214,7 +215,7 @@
 		<xs:complexType mixed="true">
 			<xs:complexContent>
 				<xs:extension base="everyTrail.class">
-					<xs:attribute ref="class" default="- topic/fireign photoFile/everyTrail "/>
+					<xs:attribute ref="class" default="- topic/foreign photoFile/everyTrail "/>
 					<xs:attribute name="width" default="740"/>
 					<xs:attribute name="height" default="600"/>
 					<xs:attribute name="tripId" use="required"/>
@@ -229,13 +230,32 @@
 		</xs:sequence>
 	</xs:complexType>
 	
+	<!--umap-->
+	<xs:element name="umap">
+		<xs:complexType mixed="true">
+			<xs:complexContent>
+				<xs:extension base="umap.class">
+					<xs:attribute ref="class" default="- topic/foreign photoFile/umap "/>
+					<xs:attribute name="width" default="740"/>
+					<xs:attribute name="height" default="600"/>
+					<xs:attribute name="mapId" use="required"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="umap.class" mixed="true">
+		<xs:sequence>
+			<xs:group ref="text" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
 	
 	<!--youTube-->
 	<xs:element name="youTube">
 		<xs:complexType mixed="true">
 			<xs:complexContent>
 				<xs:extension base="youTube.class">
-					<xs:attribute ref="class" default="- topic/fireign photoFile/youTube "/>
+					<xs:attribute ref="class" default="- topic/foreign photoFile/youTube "/>
 					<xs:attribute name="width" default="425"/>
 					<xs:attribute name="height" default="344"/>
 					<xs:attribute name="href" use="required"/>
