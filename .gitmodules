@@ -1,0 +1,3 @@
+[submodule "schema/photo"]
+	path = schema/photo
+	url = git@github.com:teux/ru.teux.photo.xsd.git
