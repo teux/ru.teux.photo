@@ -437,7 +437,7 @@
                     <xsl:text>?</xsl:text>
                     <xsl:text>scaleControl=false&amp;</xsl:text>
                     <xsl:text>miniMap=false&amp;</xsl:text>
-                    <xsl:text>scrollWheelZoom=true&amp;</xsl:text>
+                    <xsl:text>scrollWheelZoom=false&amp;</xsl:text>
                     <xsl:text>zoomControl=true&amp;</xsl:text>
                     <xsl:text>allowEdit=false&amp;</xsl:text>
                     <xsl:text>moreControl=false&amp;</xsl:text>
