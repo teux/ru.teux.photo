@@ -426,7 +426,27 @@
             </a>
         </center>
     </xsl:template>
-    
+
+    <!--Блок parallax -->
+    <xsl:template match="*[contains(@class,' photoFile/parallax ')]">
+        <div class="parallax js-module" data-module="Parallax" data-slowdown="{@slowdown}">
+            <div class="parallax--scroll-container">
+                <img class="parallax--bg-image" src="{image/@href}"/>
+            </div>
+            <a class="parallax--link" href="{@href}" target="_blank">
+                <div class="parallax--content">
+                    <xsl:apply-templates select="*[not(contains(@class, ' topic/image '))]" mode="parallax"/>
+                </div>
+            </a>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="*" mode="parallax">
+        <span class="{concat('parallax--', substring-after(@class, '/'))}">
+            <xsl:apply-templates select="node()"/>
+        </span>
+    </xsl:template>
+
     <!-- Карта umap -->
     <xsl:template match="*[contains(@class,' photoFile/umap ')]">
         <center>
