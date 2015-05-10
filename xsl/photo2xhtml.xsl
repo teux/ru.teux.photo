@@ -431,7 +431,11 @@
     <xsl:template match="*[contains(@class,' photoFile/parallax ')]">
         <div class="parallax js-module" data-module="Parallax" data-slowdown="{@slowdown}">
             <div class="parallax--scroll-container">
-                <img class="parallax--bg-image" src="{image/@href}"/>
+                <img class="parallax--bg-image" src="{image/@href}">
+                    <xsl:if test="@slowdown">
+                        <xsl:attribute name="style">bottom:0</xsl:attribute>
+                    </xsl:if>
+                </img>
             </div>
             <a class="parallax--link" href="{@href}" target="_blank">
                 <div class="parallax--content">
