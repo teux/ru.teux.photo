@@ -430,6 +430,9 @@
     <!--Блок parallax -->
     <xsl:template match="*[contains(@class,' photoFile/parallax ')]">
         <div class="parallax js-module" data-module="Parallax" data-slowdown="{@slowdown}">
+            <xsl:if test="@height">
+                <xsl:attribute name="style">height:<xsl:value-of select="@height"/>px;</xsl:attribute>
+            </xsl:if>
             <div class="parallax--scroll-container">
                 <img class="parallax--bg-image" src="{image/@href}">
                     <xsl:if test="@slowdown">

@@ -6,6 +6,8 @@
 		uri="schema/photo/phsizeAttDomain.xsd"/>
     <system systemId="urn:teux:names:specialization:dita:xsd:slowdownAttDomain.xsd"
             uri="schema/photo/slowdownAttDomain.xsd"/>
+	<system systemId="urn:teux:names:specialization:dita:xsd:heightAttDomain.xsd"
+			uri="schema/photo/heightAttDomain.xsd"/>
 	<system systemId="urn:teux:names:specialization:dita:xsd:dita-redefine.xsd"
 		uri="schema/photo/dita-redefine.xsd"/>
 	<system systemId="urn:teux:names:specialization:dita:xsd:photo.xsd" uri="schema/photo/photo.xsd"/>
