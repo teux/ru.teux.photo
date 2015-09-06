@@ -12,8 +12,8 @@
     <!-- ============================================================================== -->
     <xsl:template match="*[contains(@class,' photoFile/photoSection ')]">
         <xsl:variable name="fotoSection" select="."/>
-        <xsl:variable name="fotoDimension" select="('small', 'middle', 'large')"/>
-        <xsl:variable name="columnCount" select="(4, 2, 1)"/>
+        <xsl:variable name="fotoDimension" select="('small', 'middle', 'large', 'xlarge')"/>
+        <xsl:variable name="columnCount" select="(4, 2, 1, 1)"/>
         <xsl:variable name="secPosition"
                       select="count(preceding::*[contains(@class,' photoFile/photoSection ')])+1"/>
 
@@ -27,7 +27,7 @@
 
             <xsl:value-of select="$newline"/>
             <!-- Таблица фотографий  -->
-            <div>
+            <div class="photo-section">
                 <xsl:variable name="iter"
                               select="if (index-of($fotoDimension, @phsize) > 0) then index-of($fotoDimension, @phsize) else 2"/>
                 <xsl:call-template name="makePhotoTable">
@@ -118,7 +118,7 @@
         <xsl:variable name="colBalance" select="(1 to $col)"/>
 
         <xsl:value-of select="$newline"/>
-        <table class="photoFile" cellspacing="10px">
+        <table class="photoFile photo-section--table" cellspacing="10px">
             <xsl:attribute name="id">
                 <xsl:text>photo</xsl:text>
                 <xsl:value-of select="$secPosition"/>
@@ -188,7 +188,7 @@
                                                         select="if($titleText != '') then $titleText else $curFig/ancestor::*[title][1]/title"
                                                         />
                                             </xsl:attribute>
-                                            <img class="photo">
+                                            <img class="photo photo-section--photo">
                                                 <xsl:attribute name="src">
                                                     <xsl:call-template name="getPhotoRef">
                                                         <xsl:with-param name="ref" select="image/@href"/>
