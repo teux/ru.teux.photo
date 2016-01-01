@@ -386,44 +386,27 @@
         <xsl:variable name="h" select="@height"/>
 
         <center>
-            <object codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+            <iframe marginheight="0" marginwidth="0" frameborder="0" scrolling="no">
+                <xsl:attribute name="src">
+                    <xsl:text>http://www.everytrail.com/iframe2.php?trip_id=</xsl:text><xsl:value-of select="@tripId"/>
+                    <xsl:text>&amp;width=</xsl:text><xsl:value-of select="@width"/>
+                    <xsl:text>&amp;height=</xsl:text><xsl:value-of select="@height"/>
+                </xsl:attribute>
                 <xsl:attribute name="width">
                     <xsl:value-of select="@width"/>
                 </xsl:attribute>
                 <xsl:attribute name="height">
                     <xsl:value-of select="@height"/>
                 </xsl:attribute>
-                <param name="wmode" value="transparent"/>
-                <param name="movie" value="http://www.everytrail.com/swf/widget.swf"/>
-                <param name="FlashVars">
-                    <xsl:attribute name="value">
-                        <xsl:text>units=metric&amp;mode=1&amp;tripId=</xsl:text>
-                        <xsl:value-of select="@tripId"/>
-                    </xsl:attribute>
-                </param>
-                <embed src="http://www.everytrail.com/swf/widget.swf" quality="high"
-                       type="application/x-shockwave-flash"
-                       pluginspage="http://www.adobe.com/go/getflashplayer" wmode="transparent">
-                    <xsl:attribute name="width">
-                        <xsl:value-of select="@width"/>
-                    </xsl:attribute>
-                    <xsl:attribute name="height">
-                        <xsl:value-of select="@height"/>
-                    </xsl:attribute>
-                    <xsl:attribute name="FlashVars">
-                        <xsl:text>units=metric&amp;mode=1&amp;mapType=Hybrid&amp;tripId=</xsl:text>
-                        <xsl:value-of select="@tripId"/>
-                    </xsl:attribute>
-                </embed>
-            </object>
+            </iframe>
             <br/>
-            <a target="_blank">
+            <!--<a target="_blank">
                 <xsl:attribute name="href">
                     <xsl:text>http://www.everytrail.com/fullscreen.php?trip_id=</xsl:text><xsl:value-of
                         select="@tripId"/>
                 </xsl:attribute>
                 Смотреть карту во весь экран<xsl:text/>
-            </a>
+            </a>-->
         </center>
     </xsl:template>
 
