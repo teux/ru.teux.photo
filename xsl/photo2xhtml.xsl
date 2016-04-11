@@ -442,7 +442,7 @@
         <center>
             <iframe width="100%" height="300px" frameBorder="0">
                 <xsl:attribute name="src">
-                    <xsl:text>http://umap.openstreetmap.fr/en/map/</xsl:text>
+                    <xsl:text>http://umap.openstreetmap.fr/ru/map/</xsl:text>
                     <xsl:value-of select="@mapId"/>
                     <xsl:text>?</xsl:text>
                     <xsl:text>scaleControl=false&amp;</xsl:text>
@@ -458,7 +458,7 @@
             <br/>
             <a target="_blank">
                 <xsl:attribute name="href">
-                    <xsl:text>http://umap.openstreetmap.fr/en/map/</xsl:text>
+                    <xsl:text>http://umap.openstreetmap.fr/ru/map/</xsl:text>
                     <xsl:value-of select="@mapId"/>
                 </xsl:attribute>
                 Смотреть карту во весь экран<xsl:text/>
