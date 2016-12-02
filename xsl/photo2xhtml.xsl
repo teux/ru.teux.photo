@@ -551,10 +551,30 @@
                     </object>
                 </xsl:otherwise>
             </xsl:choose>
-
-
         </center>
     </xsl:template>
+
+    <!-- Видео vimeo -->
+    <xsl:template match="*[contains(@class,' photoFile/vimeo ')]">
+        <center>
+            <xsl:if test="matches(@href, 'https://vimeo.com/\d+' )">
+                <iframe frameborder="0" allowfullscreen="yes">
+                    <xsl:attribute name="width"
+                                   select="if(@width cast as xs:integer) then @width else 746"/>
+                    <xsl:attribute name="height"
+                                   select="if(@height  cast as xs:integer) then @height else 420"/>
+                    <xsl:attribute name="src">
+                        <xsl:value-of select="'https://player.vimeo.com/video/'"/>
+                        <xsl:value-of select="replace(@href,'https://vimeo.com/(\d+)','$1')"/>
+                    </xsl:attribute>
+                    <xsl:attribute name="webkitallowfullscreen" />
+                    <xsl:attribute name="mozallowfullscreen" />
+                    <xsl:attribute name="allowfullscreen" />
+                </iframe>
+            </xsl:if>
+        </center>
+    </xsl:template>
+
 
     <!-- Замена шаблон для обработки элемента object -->
     <!-- ============================================================== -->
